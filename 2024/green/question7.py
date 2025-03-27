@@ -16,8 +16,37 @@ for i, val in enumerate('ABCD'):
         CHOICES[i * 6 + j * 2 + 1].append(r[1])
         CHOICES[i * 6 + j * 2 + 1].append(r[0])
 
+
+# OR just type them all out
+ALT_CHOICES = [
+    ['A', 'B', 'C', 'D'],
+    ['A', 'B', 'D', 'C'],
+    ['A', 'C', 'B', 'D'],
+    ['A', 'C', 'D', 'B'],
+    ['A', 'D', 'B', 'C'],
+    ['A', 'D', 'C', 'B'],
+    ['B', 'A', 'C', 'D'],
+    ['B', 'A', 'D', 'C'],
+    ['B', 'C', 'A', 'D'],
+    ['B', 'C', 'D', 'A'],
+    ['B', 'D', 'A', 'C'],
+    ['B', 'D', 'C', 'A'],
+    ['C', 'A', 'B', 'D'],
+    ['C', 'A', 'D', 'B'],
+    ['C', 'B', 'A', 'D'],
+    ['C', 'B', 'D', 'A'],
+    ['C', 'D', 'A', 'B'],
+    ['C', 'D', 'B', 'A'],
+    ['D', 'A', 'B', 'C'],
+    ['D', 'A', 'C', 'B'],
+    ['D', 'B', 'A', 'C'],
+    ['D', 'B', 'C', 'A'],
+    ['D', 'C', 'A', 'B'],
+    ['D', 'C', 'B', 'A']
+]
+
 # TEST CASE
-VAL = '0   0   0   7   3   0   0   9   0   0   0   0   6   0   0   0   0   5   0   3   0   0   0   0'
+# VAL = '0   0   0   7   3   0   0   9   0   0   0   0   6   0   0   0   0   5   0   3   0   0   0   0'
 
 CANDIADATES = ['A', 'B', 'C', 'D']
 enter = input().split('   ')
