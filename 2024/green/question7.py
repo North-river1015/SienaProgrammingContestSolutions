@@ -20,7 +20,7 @@ for i, val in enumerate('ABCD'):
 VAL = '0   0   0   7   3   0   0   9   0   0   0   0   6   0   0   0   0   5   0   3   0   0   0   0'
 
 CANDIADATES = ['A', 'B', 'C', 'D']
-enter = VAL.split('   ') # input().split('   ')
+enter = input().split('   ')
 votes = []
 
 for i, v in enumerate(enter):
@@ -44,4 +44,3 @@ while len(CANDIADATES) > 1:
 
 print(CANDIADATES[0])
 print(vote_count[CANDIADATES[0]])
-
