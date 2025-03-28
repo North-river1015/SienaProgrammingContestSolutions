@@ -48,16 +48,16 @@ ALT_CHOICES = [
 # TEST CASE
 # VAL = '0   0   0   7   3   0   0   9   0   0   0   0   6   0   0   0   0   5   0   3   0   0   0   0'
 
-CANDIADATES = ['A', 'B', 'C', 'D']
+candidates = ['A', 'B', 'C', 'D']
 enter = input().split('   ')
 votes = []
 
 for i, v in enumerate(enter):
         if int(v) != 0:
-            for _ in range(int(v)): votes.append(copy(CHOICES[i]))
+            for _ in range(int(v)): votes.append(copy(CHOICES[i])) # alternatively, .append([CHOICES[i][0], CHOICES[i][1], CHOICES[i][2], CHOICES[i][3]])
 
-while len(CANDIADATES) > 1: 
-    vote_count = {c : 0 for c in CANDIADATES}
+while len(candidates) > 1: 
+    vote_count = {c : 0 for c in candidates}
     for vote in votes:
         vote_count[vote[0]] += 1
 
@@ -66,10 +66,10 @@ while len(CANDIADATES) > 1:
         if count[1] < min_vote[0]:
             min_vote = [count[1], count[0]]
     
-    CANDIADATES.remove(min_vote[1])
+    candidates.remove(min_vote[1])
     vote_count.pop(min_vote[1])
     for vote_i in range(len(votes)):
         votes[vote_i].remove(min_vote[1])
 
-print(CANDIADATES[0])
-print(vote_count[CANDIADATES[0]])
+print(candidates[0])
+print(vote_count[candidates[0]])
